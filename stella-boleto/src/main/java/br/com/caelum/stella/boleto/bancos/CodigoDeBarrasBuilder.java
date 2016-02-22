@@ -24,9 +24,10 @@ class CodigoDeBarrasBuilder {
 	 */
 	CodigoDeBarrasBuilder(Boleto boleto) {
 		this.banco = boleto.getBanco();
-		this.codigoDeBarras = new StringBuilder(44);
-		this.codigoDeBarras.append(banco.getNumeroFormatado());		
 		int codigoEspecieMoeda = boleto.getCodigoEspecieMoeda();
+		this.codigoDeBarras = new StringBuilder(44);
+
+                this.codigoDeBarras.append(banco.getNumeroFormatado());		
 		this.codigoDeBarras.append(String.valueOf(codigoEspecieMoeda));
 		this.codigoDeBarras.append(boleto.getFatorVencimento());
 		this.codigoDeBarras.append(boleto.getValorFormatado());

@@ -6,132 +6,143 @@ import static br.com.caelum.stella.boleto.utils.StellaStringUtils.leftPadWithZer
 
 public class Beneficiario implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	private String agencia;
-	private String digitoAgencia;
+    private String agencia;
+    private String digitoAgencia;
 
-	private String codigoBeneficiario;
-	private String digitoCodigoBeneficiario;
+    private String codigoBeneficiario;
+    private String digitoCodigoBeneficiario;
 
-	private String carteira;
-	private String nossoNumero;
-	private String digitoNossoNumero;
-	
-	private String nomeBeneficiario;
-	private String documento;
-	private Endereco endereco = Endereco.novoEndereco();
+    private String carteira;
+    private String nossoNumero;
+    private String digitoNossoNumero;
 
-	private String numeroConvenio; // BB...
+    private String nomeBeneficiario;
+    private String documento;
+    private Endereco endereco = Endereco.novoEndereco();
 
-	private Beneficiario() {
-	}
-	
-	public String getAgenciaFormatada(){
-		return leftPadWithZeros(agencia, 4);
-	}
+    private String numeroConvenio; // BB...
 
-	public static Beneficiario novoBeneficiario() {
-		return new Beneficiario();
-	}
+    private String posto; //Sicredi
 
-	public String getAgencia() {
-		return agencia;
-	}
+    private Beneficiario() {
+    }
 
-	public Beneficiario comAgencia(String agencia) {
-		this.agencia = agencia;
-		return this;
-	}
+    public String getAgenciaFormatada() {
+        return leftPadWithZeros(agencia, 4);
+    }
 
-	public String getDigitoAgencia() {
-		return digitoAgencia;
-	}
+    public static Beneficiario novoBeneficiario() {
+        return new Beneficiario();
+    }
 
-	public Beneficiario comDigitoAgencia(String digitoAgencia) {
-		this.digitoAgencia = digitoAgencia;
-		return this;
-	}
+    public String getAgencia() {
+        return agencia;
+    }
 
-	public String getCodigoBeneficiario() {
-		return codigoBeneficiario;
-	}
+    public Beneficiario comAgencia(String agencia) {
+        this.agencia = agencia;
+        return this;
+    }
 
-	public Beneficiario comCodigoBeneficiario(String codigoBeneficiario) {
-		this.codigoBeneficiario = codigoBeneficiario;
-		return this;
-	}
+    public String getDigitoAgencia() {
+        return digitoAgencia;
+    }
 
-	public String getDigitoCodigoBeneficiario() {
-		return digitoCodigoBeneficiario;
-	}
+    public Beneficiario comDigitoAgencia(String digitoAgencia) {
+        this.digitoAgencia = digitoAgencia;
+        return this;
+    }
 
-	public Beneficiario comDigitoCodigoBeneficiario(String digitoCodigoBeneficiario) {
-		this.digitoCodigoBeneficiario = digitoCodigoBeneficiario;
-		return this;
-	}
+    public String getCodigoBeneficiario() {
+        return codigoBeneficiario;
+    }
 
-	public String getCarteira() {
-		return carteira;
-	}
+    public Beneficiario comCodigoBeneficiario(String codigoBeneficiario) {
+        this.codigoBeneficiario = codigoBeneficiario;
+        return this;
+    }
 
-	public Beneficiario comCarteira(String carteira) {
-		this.carteira = carteira;
-		return this;
-	}
+    public String getDigitoCodigoBeneficiario() {
+        return digitoCodigoBeneficiario;
+    }
 
-	public String getNossoNumero() {
-		return nossoNumero;
-	}
+    public Beneficiario comDigitoCodigoBeneficiario(String digitoCodigoBeneficiario) {
+        this.digitoCodigoBeneficiario = digitoCodigoBeneficiario;
+        return this;
+    }
 
-	public Beneficiario comNossoNumero(String nossoNumero) {
-		this.nossoNumero = nossoNumero;
-		return this;
-	}
+    public String getCarteira() {
+        return carteira;
+    }
 
-	public String getDigitoNossoNumero() {
-		return digitoNossoNumero;
-	}
+    public Beneficiario comCarteira(String carteira) {
+        this.carteira = carteira;
+        return this;
+    }
 
-	public Beneficiario comDigitoNossoNumero(String digitoNossoNumero) {
-		this.digitoNossoNumero = digitoNossoNumero;
-		return this;
-	}
+    public String getNossoNumero() {
+        return nossoNumero;
+    }
 
-	public String getNomeBeneficiario() {
-		return nomeBeneficiario;
-	}
+    public Beneficiario comNossoNumero(String nossoNumero) {
+        this.nossoNumero = nossoNumero;
+        return this;
+    }
 
-	public Beneficiario comNomeBeneficiario(String nomeBeneficiario) {
-		this.nomeBeneficiario = nomeBeneficiario;
-		return this;
-	}
+    public String getDigitoNossoNumero() {
+        return digitoNossoNumero;
+    }
 
-	public Endereco getEndereco() {
-		return endereco;
-	}
+    public Beneficiario comDigitoNossoNumero(String digitoNossoNumero) {
+        this.digitoNossoNumero = digitoNossoNumero;
+        return this;
+    }
 
-	public Beneficiario comEndereco(Endereco endereco) {
-		this.endereco = endereco;
-		return this;
-	}
+    public String getNomeBeneficiario() {
+        return nomeBeneficiario;
+    }
 
-	public String getNumeroConvenio() {
-		return numeroConvenio;
-	}
+    public Beneficiario comNomeBeneficiario(String nomeBeneficiario) {
+        this.nomeBeneficiario = nomeBeneficiario;
+        return this;
+    }
 
-	public Beneficiario comNumeroConvenio(String numeroConvenio) {
-		this.numeroConvenio = numeroConvenio;
-		return this;
-	}
+    public Endereco getEndereco() {
+        return endereco;
+    }
 
-	public String getDocumento() {
-		return documento;
-	}
+    public Beneficiario comEndereco(Endereco endereco) {
+        this.endereco = endereco;
+        return this;
+    }
 
-	public Beneficiario comDocumento(String documento) {
-		this.documento = documento;
-		return this;
-	}
+    public String getNumeroConvenio() {
+        return numeroConvenio;
+    }
+
+    public Beneficiario comNumeroConvenio(String numeroConvenio) {
+        this.numeroConvenio = numeroConvenio;
+        return this;
+    }
+
+    public String getDocumento() {
+        return documento;
+    }
+
+    public Beneficiario comDocumento(String documento) {
+        this.documento = documento;
+        return this;
+    }
+
+    public Beneficiario comPosto(String posto) {
+        this.posto = posto;
+        return this;
+    }
+
+    public String getPosto() {
+        return posto;
+    }
 
 }
